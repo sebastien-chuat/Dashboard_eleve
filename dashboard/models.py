@@ -27,3 +27,30 @@ class Categorie(models.Model):
 
 	def __str__(self):
 		return self.nom
+
+class Course(models.Model):
+    name = models.CharField(max_length=30, unique=True)
+    description = models.TextField()
+    difficulty = models.IntegerField()
+    
+
+    ## J'ai commenté les trois lignes suivantes: (Sébastien) ##
+
+    # author = models.ForeignKey('Teacher', related_name="courses")
+    # chapter = models.ForeignKey('Chapter', related_name="courses")
+    # favorites = models.ManyToManyField(User, related_name="favorite_courses", blank=True, null=True)
+    
+    ## Celles-là l'étaient déjà ##
+
+    # videos = models.ManyToManyField(Video)
+    # images = models.ManyToManyField(Image)
+    # definitions = models.ManyToManyField(Definition)
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+      return self.name
+
+    def total_pages(self):
+        return self.pages.count()

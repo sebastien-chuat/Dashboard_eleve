@@ -26,5 +26,9 @@ def list_articles(request, month, year):
     text = "Vous avez demandé les articles de {0} {1}.".format(month, year)
     return HttpResponse(text)
 
+
+
+## ICI c'est vraiment à quoi ça doit ressembler ! Et non pas avec des HttpResponse ##
+
 def date_actuelle(request):
     return render (request, 'dashboard/date.html', {'date': datetime.now()})
