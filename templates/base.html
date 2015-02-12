@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-   <link rel="stylesheet" href="/media/css/style.css" />
+   <llink href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
    <title>{% block title %}Dashboard élève{% endblock %}</title>
 </head>
 <body>
@@ -9,8 +9,9 @@
     <nav>
        {% block nav %}
        <ul>
-            <li><a href="/">Dashboard</a></li>
-            <li><a href="/blog/">Cours</a></li>
+            <li><a href="/dashboard/date">Home</a></li>
+            <li><a href="/dashboard/">Dashboard</a></li>
+            <li><a href="/dashboard/cours">Cours</a></li>
             <li><a href="/contact/">Profs</a></li>
        </ul>
        {% endblock %}
