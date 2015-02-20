@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 def home(request):
-    return render(request, 'dashboard/home.html')
+    return render(request, 'home.html')
 
 def view_course(request, id_course):
     """ je dois trouver comment afficher un cours ici"""
@@ -14,11 +14,7 @@ def view_course(request, id_course):
 def list_cours(request):
     """ Liste des cours. """
 
-    return render (request, 'dashboard/cours.html')
-
-
-
-## ICI c'est vraiment à quoi ça doit ressembler ! Et non pas avec des HttpResponse ##
+    return render (request, 'cours.html')
 
 def date_actuelle(request):
-    return render (request, 'dashboard/date.html')
+    return render (request, 'date.html')
